@@ -1,4 +1,6 @@
-use crate::{jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits};
+use crate::motion::velocity::angular::angular_velocity_unit::AngularVelocityUnit;
+use crate::time::time_unit::TimeUnit;
+use crate::{jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits, jayutil_unit_motion_generate_impl};
 use crate::unit::Unit;
 
 
@@ -10,3 +12,5 @@ pub struct AngularAccelerationUnit {
 
 jayutil_unit_generate_unit_impl!(AngularAccelerationUnit);
 jayutil_unit_generate_unit_traits!(AngularAccelerationUnit);
+
+jayutil_unit_motion_generate_impl!(AngularAccelerationUnit, AngularVelocityUnit, TimeUnit);
