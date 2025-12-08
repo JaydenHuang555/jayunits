@@ -1,8 +1,8 @@
-use crate::unit::unit::Unit;
+use crate::unit::Unit;
 use crate::{
     jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits,
-    math::unit::NumLike,
-    unit::{geom::angle::angle_unit::AngleUnit, measure::Measure},
+    num::NumLike,
+    {geom::angle::angle_unit::AngleUnit, measure::Measure},
 };
 
 pub struct Angle<Num>

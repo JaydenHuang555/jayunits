@@ -1,7 +1,7 @@
-use crate::unit::motion::velocity::linear::linear_velocity_unit::LinearVelocityUnit;
-use crate::unit::time::time_unit::TimeUnit;
+use crate::motion::velocity::linear::linear_velocity_unit::LinearVelocityUnit;
+use crate::time::time_unit::TimeUnit;
 use crate::{jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits, jayutil_unit_motion_generate_impl};
-use crate::unit::unit::Unit;
+use crate::unit::Unit;
 
 pub struct LinearAccelerationUnit {
     scale_to_base: f64,

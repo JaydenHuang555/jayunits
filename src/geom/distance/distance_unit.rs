@@ -1,6 +1,6 @@
 use crate::{
-    jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits, math::unit::NumLike,
-    unit::unit::Unit,
+    jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits, num::NumLike,
+    unit::Unit,
 };
 
 pub struct DistanceUnit {

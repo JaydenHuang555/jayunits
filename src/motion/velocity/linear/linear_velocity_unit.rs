@@ -1,18 +1,10 @@
-use crate::unit::unit::Unit;
+use crate::geom::distance::distance_unit::DistanceUnit;
+use crate::time::time_unit::TimeUnit;
+use crate::unit::Unit;
 use crate::{
     jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits,
     jayutil_unit_motion_generate_impl,
-    math::unit::NumLike,
-    unit::{
-        geom::distance::{
-            distance_measure::Distance,
-            distance_unit::{self, DistanceUnit},
-        },
-        time::{
-            time_measure::Time,
-            time_unit::{self, TimeUnit},
-        },
-    },
+    num::NumLike,
 };
 
 pub struct LinearVelocityUnit {

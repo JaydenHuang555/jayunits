@@ -1,7 +1,4 @@
-use crate::{
-    math::unit::NumLike,
-    unit::{measure::Measure, unit::Unit},
-};
+use crate::unit::Unit;
 
 pub trait MotionUnit<TU, RU>: Unit
 where
@@ -15,7 +12,7 @@ where
 macro_rules! jayutil_unit_motion_generate_impl {
     ($($t:ident, $tu:ident, $ru:ident)*) => {
        $(
-            impl crate::unit::motion::motion_unit::MotionUnit<$tu, $ru> for $t {
+            impl crate::motion::motion_unit::MotionUnit<$tu, $ru> for $t {
 
                 fn derive_units(travel: &$tu, rate: &$ru) -> Self {
                     let format_name = format!("{} per {}", travel.name(), rate.name());

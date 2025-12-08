@@ -1,6 +1,6 @@
-use crate::{jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits, unit::motion::acceleration::linear::linear_acceleration_unit::LinearAccelerationUnit};
-use crate::unit::unit::Unit;
-use crate::unit::measure::Measure;
+use crate::{jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits, motion::acceleration::linear::linear_acceleration_unit::LinearAccelerationUnit};
+use crate::unit::Unit;
+use crate::measure::Measure;
 
 pub struct LinearAcceleration<Num> {
     base: Num

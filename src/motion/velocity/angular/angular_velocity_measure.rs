@@ -1,10 +1,10 @@
 use crate::{
     jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits,
-    unit::motion::velocity::angular::angular_velocity_unit::AngularVelocityUnit,
+    motion::velocity::angular::angular_velocity_unit::AngularVelocityUnit,
 };
 
-use crate::unit::measure::Measure;
-use crate::unit::unit::Unit;
+use crate::measure::Measure;
+use crate::unit::Unit;
 
 pub struct AngularVelocity<Num> {
     base: Num,

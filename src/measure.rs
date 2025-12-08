@@ -1,8 +1,7 @@
-use std::ops::Add;
 
-use crate::{math::unit::NumLike, unit::unit::Unit};
+use crate::unit::Unit;
 
-pub trait Measure<Num: NumLike, U: Unit> {
+pub trait Measure<Num: crate::num::NumLike, U: Unit> {
     fn set_base(&mut self, base: Num);
     fn get_base(&self) -> Num;
 

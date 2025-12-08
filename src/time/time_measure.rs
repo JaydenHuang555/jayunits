@@ -1,7 +1,7 @@
 use crate::{
     jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits,
-    math::unit::NumLike,
-    unit::{measure::Measure, time::time_unit::TimeUnit, unit::Unit},
+    num::NumLike,
+    {measure::Measure, time::time_unit::TimeUnit, unit::Unit},
 };
 
 pub struct Time<Num> {
