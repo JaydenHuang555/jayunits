@@ -1,14 +1,12 @@
 use std::fmt::Formatter;
 
-use crate::math::unit::NumLike;
-
 pub trait Unit /*  Display */ {
     fn from_base<Num>(&self, base: Num) -> Num
     where
-        Num: NumLike;
+        Num: crate::num::NumLike;
     fn to_base<Num>(&self, value: Num) -> Num
     where
-        Num: NumLike;
+        Num: crate::num::NumLike;
 
     fn name(&self) -> &'static str;
     fn symbol(&self) -> &'static str;
@@ -51,17 +49,17 @@ macro_rules! jayutil_unit_generate_unit_impl {
 
             }
 
-            impl crate::unit::unit::Unit for $t {
+            impl crate::unit::Unit for $t {
 
                 fn from_base<Num>(&self, base: Num) -> Num
                     where
-                        Num: crate::math::unit::NumLike  {
+                        Num: crate::num::NumLike  {
                     base / Num::from_f64(self.scale_to_base)
                 }
 
                 fn to_base<Num>(&self, value: Num) -> Num
                 where
-                    Num: crate::math::unit::NumLike {
+                    Num: crate::num::NumLike {
                         value * Num::from_f64(self.scale_to_base)
                 }
 
