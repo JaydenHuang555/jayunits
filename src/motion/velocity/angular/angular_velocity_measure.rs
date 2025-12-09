@@ -3,8 +3,8 @@ use crate::{
     motion::velocity::angular::angular_velocity_unit::AngularVelocityUnit,
 };
 
-use crate::measure::Measure;
-use crate::unit::Unit;
+use crate::builder::measure::Measure;
+use crate::builder::unit::Unit;
 
 pub struct AngularVelocity<Num> {
     base: Num,

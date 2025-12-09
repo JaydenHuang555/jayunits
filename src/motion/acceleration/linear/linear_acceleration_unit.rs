@@ -1,6 +1,6 @@
 use crate::motion::velocity::linear::linear_velocity_unit::LinearVelocityUnit;
 use crate::time::time_unit::TimeUnit;
-use crate::unit::Unit;
+use crate::builder::unit::Unit;
 use crate::{
     jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits,
     jayutil_unit_motion_generate_impl,

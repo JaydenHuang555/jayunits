@@ -23,7 +23,7 @@ macro_rules! jayutil_unit_generate_unit_traits {
         impl std::fmt::Display for $t {
 
             fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-                std::writeln!(f, "{}", self.symbol())
+                std::writeln!(f, "{}", <Self as crate::builder::unit::Unit>::symbol(self))
             }
         }
         )*
@@ -49,7 +49,7 @@ macro_rules! jayutil_unit_generate_unit_impl {
 
             }
 
-            impl crate::unit::Unit for $t {
+            impl crate::builder::unit::Unit for $t {
 
                 fn from_base<Num>(&self, base: Num) -> Num
                     where

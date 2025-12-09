@@ -1,6 +1,6 @@
 use crate::{
     jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits,
-    {measure::Measure, time::time_unit::TimeUnit, unit::Unit},
+    {builder::measure::Measure, time::time_unit::TimeUnit, builder::unit::Unit},
 };
 
 pub struct Time<Num> {

@@ -1,5 +1,5 @@
 mod angular {
-    use jayunits::measure::Measure;
+    use jayunits::builder::measure::Measure;
     use jayunits::units;
     use jayunits::
         motion::{
@@ -48,7 +48,7 @@ mod angular {
 
 mod linear {
     use jayunits::{
-        measure::Measure,
+        builder::measure::Measure,
         motion::acceleration::linear::linear_acceleration_measure::LinearAcceleration, units,
     };
 
