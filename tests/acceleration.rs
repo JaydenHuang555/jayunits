@@ -1,17 +1,15 @@
 mod angular {
     use jayunits::measure::Measure;
     use jayunits::unit_constants;
-    use jayunits::{
+    use jayunits::
         motion::{
             acceleration::angular::{
                 angular_acceleration_measure::AngularAcceleration,
-                angular_acceleration_unit::{self, AngularAccelerationUnit},
+                angular_acceleration_unit::AngularAccelerationUnit,
             },
             motion_unit::MotionUnit,
-            velocity::angular::angular_velocity_unit,
-        },
-        time::time_unit,
-    };
+        }
+    ;
 
     #[test]
     pub fn convert() {
@@ -51,9 +49,7 @@ mod angular {
 mod linear {
     use jayunits::{
         measure::Measure,
-        motion::acceleration::linear::{
-            linear_acceleration_measure::LinearAcceleration, linear_acceleration_unit,
-        }, unit_constants,
+        motion::acceleration::linear::linear_acceleration_measure::LinearAcceleration, unit_constants,
     };
 
     #[test]

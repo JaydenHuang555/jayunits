@@ -1,6 +1,6 @@
 mod distance {
     use jayunits::{
-        geom::distance::{distance_measure::Distance, distance_unit},
+        geom::distance::distance_measure::Distance,
         measure::Measure, unit_constants,
     };
 
@@ -35,7 +35,7 @@ mod distance {
 
 mod angle {
     use jayunits::{
-        geom::angle::{angle_measure::Angle, angle_unit},
+        geom::angle::angle_measure::Angle,
         measure::Measure, unit_constants,
     };
 

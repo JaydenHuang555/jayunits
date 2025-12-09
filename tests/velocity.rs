@@ -1,8 +1,6 @@
 mod linear {
     use jayunits::measure::Measure;
-    use jayunits::motion::velocity::linear::{
-        linear_velocity_measure::LinearVelocity, linear_velocity_unit,
-    };
+    use jayunits::motion::velocity::linear::linear_velocity_measure::LinearVelocity;
     use jayunits::unit_constants;
 
     #[test]
@@ -34,9 +32,7 @@ mod linear {
 
 mod angular {
     use jayunits::measure::Measure;
-    use jayunits::motion::velocity::angular::{
-        angular_velocity_measure::AngularVelocity, angular_velocity_unit,
-    };
+    use jayunits::motion::velocity::angular::angular_velocity_measure::AngularVelocity;
     use jayunits::unit_constants;
 
     #[test]

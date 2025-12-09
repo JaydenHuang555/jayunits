@@ -1,7 +1,7 @@
 mod time {
     use jayunits::{
         measure::Measure,
-        time::{time_measure::Time, time_unit}, unit_constants,
+        time::time_measure::Time, unit_constants,
     };
 
     #[test]
