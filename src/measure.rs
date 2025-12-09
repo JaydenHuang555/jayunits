@@ -108,6 +108,24 @@ macro_rules! jayutil_unit_generate_measure_traits {
                 }
             }
 
+            impl<Num> std::cmp::PartialEq for $t<Num> where Num: crate::num::NumLike {
+
+                fn eq(&self, other: &Self) -> bool {
+                    self.get_base() == other.get_base()
+                }
+
+            }
+
+            impl<Num> std::fmt::Debug for $t<Num> where Num: crate::num::NumLike {
+                
+                fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+                    f.debug_struct("Measure")
+                        .field("base", &self.base)
+                    .finish()
+                }
+
+            }
+
         )*
     };
 }
