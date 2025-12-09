@@ -1,7 +1,7 @@
 
 use crate::unit::Unit;
 
-pub trait Measure<Num: crate::num::NumLike, U: Unit> {
+pub trait Measure<Num: crate::num::NumLike, U: Unit>: Clone {
     fn set_base(&mut self, base: Num);
     fn get_base(&self) -> Num;
 
@@ -125,6 +125,18 @@ macro_rules! jayutil_unit_generate_measure_traits {
                 }
 
             }
+
+            impl<Num> Clone for $t<Num> where Num: crate::num::NumLike {
+
+                fn clone(&self) -> Self {
+                    Self {
+                        base: self.base.clone()
+                    }
+                }
+
+            }
+
+            impl<Num> Copy for $t<Num> where Num: crate::num::NumLike {}
 
         )*
     };
