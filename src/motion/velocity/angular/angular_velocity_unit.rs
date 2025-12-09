@@ -1,6 +1,6 @@
 use crate::geom::angle::angle_unit::AngleUnit;
-use crate::time::time_unit::TimeUnit;
 use crate::internal::unit::Unit;
+use crate::time::time_unit::TimeUnit;
 use crate::{
     jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits,
     jayutil_unit_motion_generate_impl,

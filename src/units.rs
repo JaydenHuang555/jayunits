@@ -1,6 +1,17 @@
-use crate::{geom::{angle::angle_unit::AngleUnit, distance::distance_unit::DistanceUnit}, motion::{acceleration::{angular::angular_acceleration_unit::AngularAccelerationUnit, linear::linear_acceleration_unit::LinearAccelerationUnit}, velocity::{angular::angular_velocity_unit::AngularVelocityUnit, linear::linear_velocity_unit::LinearVelocityUnit}}, time::time_unit::TimeUnit};
-
-
+use crate::{
+    geom::{angle::angle_unit::AngleUnit, distance::distance_unit::DistanceUnit},
+    motion::{
+        acceleration::{
+            angular::angular_acceleration_unit::AngularAccelerationUnit,
+            linear::linear_acceleration_unit::LinearAccelerationUnit,
+        },
+        velocity::{
+            angular::angular_velocity_unit::AngularVelocityUnit,
+            linear::linear_velocity_unit::LinearVelocityUnit,
+        },
+    },
+    time::time_unit::TimeUnit,
+};
 
 pub const RADIANS: &AngleUnit = &AngleUnit::from(1.0, "Radians", "rad");
 pub const DEGREES: &AngleUnit = &AngleUnit::from(std::f64::consts::PI / 180.0, "Degrees", "°");
@@ -12,7 +23,6 @@ pub const ARCSECONDS: &AngleUnit =
 pub const REVOLUTIONS: AngleUnit =
     AngleUnit::from(2.0 * std::f64::consts::PI, "Revolutions", "rev");
 pub const ROTATIONS: &AngleUnit = &AngleUnit::from(2.0 * std::f64::consts::PI, "Rotations", "rot");
-
 
 pub const METERS: &DistanceUnit = &DistanceUnit::from(1.0, "Meters", "m");
 pub const KILOMETERS: &DistanceUnit = &DistanceUnit::from(1000.0, "Kilometers", "km");
@@ -33,7 +43,6 @@ pub const ASTRONOMICAL_UNITS: &DistanceUnit =
 pub const LIGHT_YEARS: &DistanceUnit =
     &DistanceUnit::from(9_460_730_472_580_800.0, "Light Years", "ly");
 pub const PARSECS: &DistanceUnit = &DistanceUnit::from(30_856_775_814_913_672.0, "Parsecs", "pc");
-
 
 pub const RADIANS_PER_SECOND_PER_SECOND: &AngularAccelerationUnit =
     &AngularAccelerationUnit::from(1.0, "Radians per Second per Second", "rad/s²");
@@ -74,7 +83,6 @@ pub const ROTATIONS_PER_SECOND_PER_SECOND: &AngularAccelerationUnit =
         "rot/s²",
     );
 
-
 pub const METERS_PER_SECOND_PER_SECOND: &LinearAccelerationUnit =
     &LinearAccelerationUnit::from(1.0, "Meters per Second per Second", "m/s²");
 pub const KILOMETERS_PER_HOUR_PER_SECOND: &LinearAccelerationUnit =
@@ -110,7 +118,6 @@ pub const REVOLUTIONS_PER_SECOND: &AngularVelocityUnit =
 pub const ROTATIONS_PER_SECOND: &AngularVelocityUnit =
     &AngularVelocityUnit::from(2.0 * std::f64::consts::PI, "Rotations per s", "rot / s");
 
-
 pub const METERS_PER_SECOND: &LinearVelocityUnit =
     &LinearVelocityUnit::from(1.0, "Meters per Second", "m/s");
 pub const KILOMETERS_PER_HOUR: &LinearVelocityUnit =
@@ -119,7 +126,6 @@ pub const MILES_PER_HOUR: &LinearVelocityUnit =
     &LinearVelocityUnit::from(1609.344 / 3600.0, "Miles per Hour", "mph");
 pub const FEET_PER_SECOND: &LinearVelocityUnit =
     &LinearVelocityUnit::from(0.3048, "Feet per Second", "ft/s");
-
 
 pub const SECONDS: &TimeUnit = &TimeUnit::from(1.0, "Seconds", "s");
 pub const MILLISECONDS: &TimeUnit = &TimeUnit::from(0.001, "Milliseconds", "ms");
