@@ -1,6 +1,7 @@
 
 mod distance {
-    use jayunits::{geom::distance::{distance_measure::Distance, distance_unit::{self, DistanceUnit}}, measure::Measure};
+    use jayunits::{geom::distance::{distance_measure::Distance, distance_unit}, measure::Measure};
+
 
 
     #[test]
