@@ -1,5 +1,5 @@
 use crate::{
-    jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits, num::NumLike,
+    jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits,
     unit::Unit,
 };
 

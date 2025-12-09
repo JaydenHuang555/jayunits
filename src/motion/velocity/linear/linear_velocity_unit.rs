@@ -4,7 +4,6 @@ use crate::unit::Unit;
 use crate::{
     jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits,
     jayutil_unit_motion_generate_impl,
-    num::NumLike,
 };
 
 pub struct LinearVelocityUnit {
