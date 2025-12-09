@@ -1,6 +1,6 @@
 mod angular {
     use jayunits::measure::Measure;
-    use jayunits::unit_constants;
+    use jayunits::units;
     use jayunits::
         motion::{
             acceleration::angular::{
@@ -13,10 +13,10 @@ mod angular {
 
     #[test]
     pub fn convert() {
-        let input_unit = unit_constants::RADIANS_PER_SECOND_PER_SECOND;
+        let input_unit = units::RADIANS_PER_SECOND_PER_SECOND;
         let output_unit = &AngularAccelerationUnit::derive_units(
-            unit_constants::DEGREES_PER_SECOND,
-            unit_constants::MINUTES,
+            units::DEGREES_PER_SECOND,
+            units::MINUTES,
         );
         let acceleration = AngularAcceleration::from(1.0, input_unit);
         assert_eq!(
@@ -32,11 +32,11 @@ mod angular {
 
         let operand1 = AngularAcceleration::from(
             input1,
-            unit_constants::RADIANS_PER_SECOND_PER_SECOND,
+            units::RADIANS_PER_SECOND_PER_SECOND,
         );
         let operand2 = AngularAcceleration::from(
             input2,
-            unit_constants::RADIANS_PER_SECOND_PER_SECOND,
+            units::RADIANS_PER_SECOND_PER_SECOND,
         );
 
         assert_eq!((operand1 + operand2).get_base(), input1 + input2);
@@ -49,13 +49,13 @@ mod angular {
 mod linear {
     use jayunits::{
         measure::Measure,
-        motion::acceleration::linear::linear_acceleration_measure::LinearAcceleration, unit_constants,
+        motion::acceleration::linear::linear_acceleration_measure::LinearAcceleration, units,
     };
 
     #[test]
     pub fn convert() {
-        let input_unit = unit_constants::METERS_PER_SECOND_PER_SECOND;
-        let output_unit = unit_constants::FEET_PER_SECOND_PER_SECOND;
+        let input_unit = units::METERS_PER_SECOND_PER_SECOND;
+        let output_unit = units::FEET_PER_SECOND_PER_SECOND;
         let acceleration = LinearAcceleration::from(1.0, input_unit);
         assert_eq!(
             acceleration.to(output_unit),
@@ -70,11 +70,11 @@ mod linear {
 
         let operand1 = LinearAcceleration::from(
             input1,
-            unit_constants::METERS_PER_SECOND_PER_SECOND,
+            units::METERS_PER_SECOND_PER_SECOND,
         );
         let operand2 = LinearAcceleration::from(
             input2,
-            unit_constants::METERS_PER_SECOND_PER_SECOND,
+            units::METERS_PER_SECOND_PER_SECOND,
         );
 
         assert_eq!((operand1 + operand2).get_base(), input1 + input2);
