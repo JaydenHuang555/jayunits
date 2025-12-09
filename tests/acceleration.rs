@@ -1,9 +1,6 @@
 
-use jayunits;
-
 mod angular {
-    use jayunits::{geom::{angle::angle_unit, distance::distance_unit}, motion::{acceleration::angular::{angular_acceleration_measure::AngularAcceleration, angular_acceleration_unit::{self, AngularAccelerationUnit}}, motion_unit::MotionUnit, velocity::angular::angular_velocity_unit}, time::time_unit};
-    use jayunits::unit::Unit;
+    use jayunits::{motion::{acceleration::angular::{angular_acceleration_measure::AngularAcceleration, angular_acceleration_unit::{self, AngularAccelerationUnit}}, motion_unit::MotionUnit, velocity::angular::angular_velocity_unit}, time::time_unit};
     use jayunits::measure::Measure;
 
     
