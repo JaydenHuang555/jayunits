@@ -1,8 +1,8 @@
-
 mod distance {
-    use jayunits::{geom::distance::{distance_measure::Distance, distance_unit}, measure::Measure};
-
-
+    use jayunits::{
+        geom::distance::{distance_measure::Distance, distance_unit},
+        measure::Measure,
+    };
 
     #[test]
     fn convert() {
@@ -16,9 +16,7 @@ mod distance {
             distance.to(output_unit),
             input_value / output_unit.get_scale_to_base()
         )
-
     }
-
 
     #[test]
     fn math() {
@@ -32,14 +30,14 @@ mod distance {
         assert_eq!((operand1 - operand2).get_base(), input1 - input2);
         assert_eq!((operand1 * operand2).get_base(), input1 * input2);
         assert_eq!((operand1 / operand2).get_base(), input1 / input2);
-
     }
-
 }
 
 mod angle {
-    use jayunits::{geom::angle::{angle_measure::Angle, angle_unit}, measure::Measure};
-
+    use jayunits::{
+        geom::angle::{angle_measure::Angle, angle_unit},
+        measure::Measure,
+    };
 
     #[test]
     fn convert() {
@@ -53,9 +51,7 @@ mod angle {
             angle.to(output_unit),
             input_value / output_unit.get_scale_to_base()
         )
-
     }
-
 
     #[test]
     fn math() {
@@ -69,7 +65,5 @@ mod angle {
         assert_eq!((operand1 - operand2).get_base(), input1 - input2);
         assert_eq!((operand1 * operand2).get_base(), input1 * input2);
         assert_eq!((operand1 / operand2).get_base(), input1 / input2);
-
     }
-
 }

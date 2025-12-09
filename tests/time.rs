@@ -1,7 +1,8 @@
-
 mod time {
-    use jayunits::{measure::Measure, time::{time_measure::Time, time_unit}};
-
+    use jayunits::{
+        measure::Measure,
+        time::{time_measure::Time, time_unit},
+    };
 
     #[test]
     fn convert() {
@@ -15,9 +16,7 @@ mod time {
             angle.to(output_unit),
             input_value / output_unit.get_scale_to_base()
         )
-
     }
-
 
     #[test]
     fn math() {
@@ -31,7 +30,5 @@ mod time {
         assert_eq!((operand1 - operand2).get_base(), input1 - input2);
         assert_eq!((operand1 * operand2).get_base(), input1 * input2);
         assert_eq!((operand1 / operand2).get_base(), input1 / input2);
-
     }
-
 }

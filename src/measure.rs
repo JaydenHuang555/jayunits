@@ -1,4 +1,3 @@
-
 use crate::unit::Unit;
 
 pub trait Measure<Num: crate::num::NumLike, U: Unit>: Clone {
@@ -117,7 +116,7 @@ macro_rules! jayutil_unit_generate_measure_traits {
             }
 
             impl<Num> std::fmt::Debug for $t<Num> where Num: crate::num::NumLike {
-                
+
                 fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
                     f.debug_struct("Measure")
                         .field("base", &self.base)

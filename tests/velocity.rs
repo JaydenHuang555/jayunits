@@ -1,8 +1,8 @@
-
 mod linear {
-    use jayunits::motion::velocity::linear::{linear_velocity_measure::LinearVelocity, linear_velocity_unit};
     use jayunits::measure::Measure;
-
+    use jayunits::motion::velocity::linear::{
+        linear_velocity_measure::LinearVelocity, linear_velocity_unit,
+    };
 
     #[test]
     fn convert() {
@@ -28,22 +28,24 @@ mod linear {
         assert_eq!((operand1 - operand2).get_base(), input1 - input2);
         assert_eq!((operand1 * operand2).get_base(), input1 * input2);
         assert_eq!((operand1 / operand2).get_base(), input1 / input2);
-
     }
-
 }
 
 mod angular {
-    use jayunits::motion::velocity::angular::{angular_velocity_measure::AngularVelocity, angular_velocity_unit};
     use jayunits::measure::Measure;
-
+    use jayunits::motion::velocity::angular::{
+        angular_velocity_measure::AngularVelocity, angular_velocity_unit,
+    };
 
     #[test]
     fn convert() {
         let input_unt = angular_velocity_unit::RADIANS_PER_SECOND;
         let output_unit = angular_velocity_unit::ROTATIONS_PER_SECOND;
         let velocity = AngularVelocity::from(1.0, input_unt);
-        assert_eq!(velocity.to(output_unit), 1.0 / output_unit.get_scale_to_base());
+        assert_eq!(
+            velocity.to(output_unit),
+            1.0 / output_unit.get_scale_to_base()
+        );
     }
 
     #[test]
@@ -58,7 +60,5 @@ mod angular {
         assert_eq!((operand1 - operand2).get_base(), input1 - input2);
         assert_eq!((operand1 * operand2).get_base(), input1 * input2);
         assert_eq!((operand1 / operand2).get_base(), input1 / input2);
-
     }
-
 }
