@@ -1,5 +1,5 @@
 mod distance {
-    use jayunits::{geom::distance::distance_measure::Distance, internal::measure::Measure, units};
+    use jayunits::{geom::distance::distance_measure::Distance, internal::measure::Measure, constants::units};
 
     #[test]
     fn convert() {
@@ -31,7 +31,7 @@ mod distance {
 }
 
 mod angle {
-    use jayunits::{geom::angle::angle_measure::Angle, internal::measure::Measure, units};
+    use jayunits::{geom::angle::angle_measure::Angle, internal::measure::Measure, constants::units};
 
     #[test]
     fn convert() {
