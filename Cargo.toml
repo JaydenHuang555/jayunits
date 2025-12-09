@@ -1,6 +1,12 @@
 [package]
 name = "jayunits"
-version = "0.1.0"
+version = "0.0.3"
 edition = "2024"
+license = "MIT"
+description = "A simple library for handling conversions between units"
+authors = ["Jayden Huang"]
+homepage = "https://github.com/JaydenHuang555/jayunits"
+repository = "https://github.com/JaydenHuang555/jayunits"
+keywords = ["jayutil"]
 
 [dependencies]

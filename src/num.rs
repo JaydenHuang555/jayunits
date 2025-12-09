@@ -14,6 +14,7 @@ pub trait NumLike:
     + PartialOrd
     + PartialEq
     + Clone
+    + Copy
     + Debug
     + Display
 {
