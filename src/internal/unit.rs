@@ -37,9 +37,9 @@ macro_rules! jayunits_unit_factory_build_impl {
             impl $t {
                 pub const fn from(scale_to_base: f64, name: &'static str, symbol: &'static str) -> Self {
                     Self {
-                        scale_to_base: scale_to_base,
-                        name: name,
-                        symbol: symbol
+                        scale_to_base,
+                        name,
+                        symbol
                     }
                 }
 
