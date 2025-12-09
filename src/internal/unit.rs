@@ -17,7 +17,7 @@ pub trait Unit /*  Display */ {
 }
 
 #[macro_export]
-macro_rules! jayutil_unit_generate_unit_traits {
+macro_rules! jayunits_unit_factory_build_traits {
     ($($t:ident), *) => {
         $(
         impl std::fmt::Display for $t {
@@ -31,7 +31,7 @@ macro_rules! jayutil_unit_generate_unit_traits {
 }
 
 #[macro_export]
-macro_rules! jayutil_unit_generate_unit_impl {
+macro_rules! jayunits_unit_factory_build_impl {
     ($($t: ident), *) => {
        $(
             impl $t {

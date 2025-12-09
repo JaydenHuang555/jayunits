@@ -1,7 +1,7 @@
 use crate::internal::measure::Measure;
 use crate::internal::unit::Unit;
 use crate::{
-    jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits,
+    jayunits_measure_factory_build_impl, jayunits_measure_factory_build_traits,
     motion::acceleration::angular::angular_acceleration_unit::AngularAccelerationUnit,
 };
 
@@ -9,5 +9,5 @@ pub struct AngularAcceleration<Num> {
     base: Num,
 }
 
-jayutil_unit_generate_measure_impl!(AngularAcceleration, AngularAccelerationUnit);
-jayutil_unit_generate_measure_traits!(AngularAcceleration);
+jayunits_measure_factory_build_impl!(AngularAcceleration, AngularAccelerationUnit);
+jayunits_measure_factory_build_traits!(AngularAcceleration);

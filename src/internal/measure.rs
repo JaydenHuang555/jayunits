@@ -15,7 +15,7 @@ pub trait Measure<Num: crate::num::NumLike, U: Unit>: Clone {
 }
 
 #[macro_export]
-macro_rules! jayutil_unit_generate_measure_impl {
+macro_rules! jayunits_measure_factory_build_impl {
     ($($t:ident, $u:ident),*) => {
         $(
             impl<Num> $t<Num> where Num: crate::num::NumLike {
@@ -52,7 +52,7 @@ macro_rules! jayutil_unit_generate_measure_impl {
 }
 
 #[macro_export]
-macro_rules! jayutil_unit_generate_measure_traits {
+macro_rules! jayunits_measure_factory_build_traits {
     ($($t:ident),*) => {
         $(
 

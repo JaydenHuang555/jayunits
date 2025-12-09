@@ -2,7 +2,7 @@ use crate::internal::unit::Unit;
 use crate::motion::velocity::linear::linear_velocity_unit::LinearVelocityUnit;
 use crate::time::time_unit::TimeUnit;
 use crate::{
-    jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits,
+    jayunits_unit_factory_build_impl, jayunits_unit_factory_build_traits,
     jayutil_unit_motion_generate_impl,
 };
 
@@ -12,7 +12,7 @@ pub struct LinearAccelerationUnit {
     symbol: &'static str,
 }
 
-jayutil_unit_generate_unit_impl!(LinearAccelerationUnit);
-jayutil_unit_generate_unit_traits!(LinearAccelerationUnit);
+jayunits_unit_factory_build_impl!(LinearAccelerationUnit);
+jayunits_unit_factory_build_traits!(LinearAccelerationUnit);
 
 jayutil_unit_motion_generate_impl!(LinearAccelerationUnit, LinearVelocityUnit, TimeUnit);

@@ -1,5 +1,5 @@
 use crate::{
-    jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits,
+    jayunits_measure_factory_build_impl, jayunits_measure_factory_build_traits,
     {internal::measure::Measure, internal::unit::Unit, time::time_unit::TimeUnit},
 };
 
@@ -7,5 +7,5 @@ pub struct Time<Num> {
     base: Num,
 }
 
-jayutil_unit_generate_measure_impl!(Time, TimeUnit);
-jayutil_unit_generate_measure_traits!(Time);
+jayunits_measure_factory_build_impl!(Time, TimeUnit);
+jayunits_measure_factory_build_traits!(Time);

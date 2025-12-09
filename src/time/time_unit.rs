@@ -1,4 +1,4 @@
-use crate::{jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits};
+use crate::{jayunits_unit_factory_build_impl, jayunits_unit_factory_build_traits};
 
 pub struct TimeUnit {
     scale_to_base: f64,
@@ -6,5 +6,5 @@ pub struct TimeUnit {
     symbol: &'static str,
 }
 
-jayutil_unit_generate_unit_impl!(TimeUnit);
-jayutil_unit_generate_unit_traits!(TimeUnit);
+jayunits_unit_factory_build_impl!(TimeUnit);
+jayunits_unit_factory_build_traits!(TimeUnit);

@@ -2,7 +2,7 @@ use crate::geom::angle::angle_unit::AngleUnit;
 use crate::internal::unit::Unit;
 use crate::time::time_unit::TimeUnit;
 use crate::{
-    jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits,
+    jayunits_unit_factory_build_impl, jayunits_unit_factory_build_traits,
     jayutil_unit_motion_generate_impl,
 };
 
@@ -12,7 +12,7 @@ pub struct AngularVelocityUnit {
     symbol: &'static str,
 }
 
-jayutil_unit_generate_unit_impl!(AngularVelocityUnit);
-jayutil_unit_generate_unit_traits!(AngularVelocityUnit);
+jayunits_unit_factory_build_impl!(AngularVelocityUnit);
+jayunits_unit_factory_build_traits!(AngularVelocityUnit);
 
 jayutil_unit_motion_generate_impl!(AngularVelocityUnit, AngleUnit, TimeUnit);

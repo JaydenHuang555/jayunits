@@ -1,7 +1,7 @@
 use crate::internal::measure::Measure;
 use crate::internal::unit::Unit;
 use crate::{
-    jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits,
+    jayunits_measure_factory_build_impl, jayunits_measure_factory_build_traits,
     motion::velocity::linear::linear_velocity_unit::LinearVelocityUnit,
 };
 
@@ -9,5 +9,5 @@ pub struct LinearVelocity<Num> {
     base: Num,
 }
 
-jayutil_unit_generate_measure_impl!(LinearVelocity, LinearVelocityUnit);
-jayutil_unit_generate_measure_traits!(LinearVelocity);
+jayunits_measure_factory_build_impl!(LinearVelocity, LinearVelocityUnit);
+jayunits_measure_factory_build_traits!(LinearVelocity);

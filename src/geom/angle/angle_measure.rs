@@ -1,6 +1,6 @@
 use crate::internal::unit::Unit;
 use crate::{
-    jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits,
+    jayunits_measure_factory_build_impl, jayunits_measure_factory_build_traits,
     num::NumLike,
     {geom::angle::angle_unit::AngleUnit, internal::measure::Measure},
 };
@@ -12,5 +12,5 @@ where
     base: Num,
 }
 
-jayutil_unit_generate_measure_impl!(Angle, AngleUnit);
-jayutil_unit_generate_measure_traits!(Angle);
+jayunits_measure_factory_build_impl!(Angle, AngleUnit);
+jayunits_measure_factory_build_traits!(Angle);
