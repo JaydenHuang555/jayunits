@@ -2,5 +2,10 @@
 name = "jayunits"
 version = "0.0.3"
 edition = "2024"
+description = "A simple library for handling conversions between units"
+authors = ["Jayden Huang"]
+homepage = "https://github.com/JaydenHuang555/jayunits"
+repository = "https://github.com/JaydenHuang555/jayunits"
+keywords = ["jayutil"]
 
 [dependencies]
