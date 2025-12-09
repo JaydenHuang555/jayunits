@@ -1,4 +1,4 @@
-use crate::builder::unit::Unit;
+use crate::internal::unit::Unit;
 
 pub trait MotionUnit<TU, RU>: Unit
 where

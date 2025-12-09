@@ -1,6 +1,6 @@
 mod time {
     use jayunits::{
-        builder::measure::Measure,
+        internal::measure::Measure,
         time::time_measure::Time, units,
     };
 

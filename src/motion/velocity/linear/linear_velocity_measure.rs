@@ -1,5 +1,5 @@
-use crate::builder::measure::Measure;
-use crate::builder::unit::Unit;
+use crate::internal::measure::Measure;
+use crate::internal::unit::Unit;
 use crate::{
     jayutil_unit_generate_measure_impl, jayutil_unit_generate_measure_traits,
     motion::velocity::linear::linear_velocity_unit::LinearVelocityUnit,

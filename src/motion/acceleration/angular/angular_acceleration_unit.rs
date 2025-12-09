@@ -1,6 +1,6 @@
 use crate::motion::velocity::angular::angular_velocity_unit::AngularVelocityUnit;
 use crate::time::time_unit::TimeUnit;
-use crate::builder::unit::Unit;
+use crate::internal::unit::Unit;
 use crate::{
     jayutil_unit_generate_unit_impl, jayutil_unit_generate_unit_traits,
     jayutil_unit_motion_generate_impl,
