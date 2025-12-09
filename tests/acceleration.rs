@@ -1,9 +1,6 @@
 
-use jayunits;
-
 mod angular {
-    use jayunits::{geom::{angle::angle_unit, distance::distance_unit}, motion::{acceleration::angular::{angular_acceleration_measure::AngularAcceleration, angular_acceleration_unit::{self, AngularAccelerationUnit}}, motion_unit::MotionUnit, velocity::angular::angular_velocity_unit}, time::time_unit};
-    use jayunits::unit::Unit;
+    use jayunits::{motion::{acceleration::angular::{angular_acceleration_measure::AngularAcceleration, angular_acceleration_unit::{self, AngularAccelerationUnit}}, motion_unit::MotionUnit, velocity::angular::angular_velocity_unit}, time::time_unit};
     use jayunits::measure::Measure;
 
     
@@ -17,6 +14,22 @@ mod angular {
             1.0 / output_unit.get_scale_to_base()
         );
     }
+
+    #[test]
+    fn math() {
+
+        let input1 = 48.112;
+        let input2 = 90.34;
+
+        let operand1 = AngularAcceleration::from(input1, angular_acceleration_unit::RADIANS_PER_SECOND_PER_SECOND);
+        let operand2 = AngularAcceleration::from(input2, angular_acceleration_unit::RADIANS_PER_SECOND_PER_SECOND);
+
+        assert_eq!((operand1 + operand2).get_base(), input1 + input2);
+        assert_eq!((operand1 - operand2).get_base(), input1 - input2);
+        assert_eq!((operand1 * operand2).get_base(), input1 * input2);
+        assert_eq!((operand1 / operand2).get_base(), input1 / input2);
+    }
+
 }
 
 mod linear {
@@ -32,6 +45,21 @@ mod linear {
             acceleration.to(output_unit),
             1.0 / output_unit.get_scale_to_base()
         )
+    }
+
+    #[test]
+    fn math() {
+
+        let input1 = 32.1;
+        let input2 = 63.32;
+
+        let operand1 = LinearAcceleration::from(input1, linear_acceleration_unit::METERS_PER_SECOND_PER_SECOND);
+        let operand2 = LinearAcceleration::from(input2, linear_acceleration_unit::METERS_PER_SECOND_PER_SECOND);
+
+        assert_eq!((operand1 + operand2).get_base(), input1 + input2);
+        assert_eq!((operand1 - operand2).get_base(), input1 - input2);
+        assert_eq!((operand1 * operand2).get_base(), input1 * input2);
+        assert_eq!((operand1 / operand2).get_base(), input1 / input2);
     }
 
 }
