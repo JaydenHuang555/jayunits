@@ -1,5 +1,5 @@
 mod time {
-    use jayunits::{internal::measure::Measure, time::time_measure::Time, constants::units};
+    use jayunits::{constants::units, internal::measure::Measure, time::time_measure::Time};
 
     #[test]
     fn convert() {

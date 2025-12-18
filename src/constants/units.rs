@@ -1,4 +1,3 @@
-
 use crate::{
     geom::{angle::angle_unit::AngleUnit, distance::distance_unit::DistanceUnit},
     motion::{
@@ -59,30 +58,27 @@ pub const GRADIANS_PER_SECOND_PER_SECOND: AngularAccelerationUnit = AngularAccel
     "Gradians per Second per Second",
     "gon/s²",
 );
-pub const ARCMINUTES_PER_SECOND_PER_SECOND: AngularAccelerationUnit =
-    AngularAccelerationUnit::from(
-        std::f64::consts::PI / 10800.0,
-        "Arcminutes per Second per Second",
-        "′/s²",
-    );
-pub const ARCSECONDS_PER_SECOND_PER_SECOND: AngularAccelerationUnit =
-    AngularAccelerationUnit::from(
-        std::f64::consts::PI / 648_000.0,
-        "Arcseconds per Second per Second",
-        "″/s²",
-    );
+pub const ARCMINUTES_PER_SECOND_PER_SECOND: AngularAccelerationUnit = AngularAccelerationUnit::from(
+    std::f64::consts::PI / 10800.0,
+    "Arcminutes per Second per Second",
+    "′/s²",
+);
+pub const ARCSECONDS_PER_SECOND_PER_SECOND: AngularAccelerationUnit = AngularAccelerationUnit::from(
+    std::f64::consts::PI / 648_000.0,
+    "Arcseconds per Second per Second",
+    "″/s²",
+);
 pub const REVOLUTIONS_PER_SECOND_PER_SECOND: AngularAccelerationUnit =
     AngularAccelerationUnit::from(
         2.0 * std::f64::consts::PI,
         "Revolutions per Second per Second",
         "rev/s²",
     );
-pub const ROTATIONS_PER_SECOND_PER_SECOND: AngularAccelerationUnit =
-    AngularAccelerationUnit::from(
-        2.0 * std::f64::consts::PI,
-        "Rotations per Second per Second",
-        "rot/s²",
-    );
+pub const ROTATIONS_PER_SECOND_PER_SECOND: AngularAccelerationUnit = AngularAccelerationUnit::from(
+    2.0 * std::f64::consts::PI,
+    "Rotations per Second per Second",
+    "rot/s²",
+);
 
 pub const METERS_PER_SECOND_PER_SECOND: LinearAccelerationUnit =
     LinearAccelerationUnit::from(1.0, "Meters per Second per Second", "m/s²");

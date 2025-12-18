@@ -1,7 +1,7 @@
 mod linear {
+    use jayunits::constants::units;
     use jayunits::internal::measure::Measure;
     use jayunits::motion::velocity::linear::linear_velocity_measure::LinearVelocity;
-    use jayunits::constants::units;
 
     #[test]
     fn convert() {
@@ -31,9 +31,9 @@ mod linear {
 }
 
 mod angular {
+    use jayunits::constants::units;
     use jayunits::internal::measure::Measure;
     use jayunits::motion::velocity::angular::angular_velocity_measure::AngularVelocity;
-    use jayunits::constants::units;
 
     #[test]
     fn convert() {

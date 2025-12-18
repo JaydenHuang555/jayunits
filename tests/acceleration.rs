@@ -1,4 +1,5 @@
 mod angular {
+    use jayunits::constants::units;
     use jayunits::internal::measure::Measure;
     use jayunits::motion::{
         acceleration::angular::{
@@ -7,7 +8,6 @@ mod angular {
         },
         motion_unit::MotionUnit,
     };
-    use jayunits::constants::units;
 
     #[test]
     pub fn convert() {
@@ -38,8 +38,8 @@ mod angular {
 
 mod linear {
     use jayunits::{
-        internal::measure::Measure,
-        motion::acceleration::linear::linear_acceleration_measure::LinearAcceleration, constants::units,
+        constants::units, internal::measure::Measure,
+        motion::acceleration::linear::linear_acceleration_measure::LinearAcceleration,
     };
 
     #[test]
